@@ -31,7 +31,7 @@ function OtpScreen() {
       .then((result) => {
         if (result.status === 200 && result.body.token) {
           localStorage.setItem("tokenVal", result.body.token)
-          nav("/home")
+          nav("/Welcome")
           return
         }
         if (result.status === 401) {
@@ -61,4 +61,5 @@ function OtpScreen() {
     </div>
   )
 }
+
 export default OtpScreen
