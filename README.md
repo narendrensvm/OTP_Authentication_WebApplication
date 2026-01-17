@@ -58,27 +58,27 @@ Backend API Endpoints
 
 ### Request OTP
 
-**POST** /auth/request-otp
+**POST** /sendOtp
 
 **Request Body**
 
-{<br>"identifier": "user@example.com"<br>}
+{<br>"val": "user@example.com"<br>}
 
 Generates a 6-digit OTP and prints it in the backend terminal.
 
 ### Verify OTP
 
-**POST** /auth/verify-otp
+**POST** /checkOtp
 
 **Request Body**
 
-{<br>"identifier": "user@example.com",<br>"otp": "123456"<br>}
+{<br>"Val": "user@example.com",<br>"setCode": "123456"<br>}
 
 Validates the OTP, tracks failed attempts, blocks the user if required, and returns a session token on success.
 
 ### Get Logged-In User
 
-**GET** /auth/me
+**GET** /whoami
 
 **Headers**
 
